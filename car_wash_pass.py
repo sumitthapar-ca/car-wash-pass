@@ -1,7 +1,7 @@
 from datetime import date
 from dateutil.relativedelta import *
 
-class WashPass:
+class CarWashPass:
     price = 0
     members = []
 
@@ -29,7 +29,7 @@ class WashPass:
         self.end_date = self.start_date + relativedelta(days=+90)
         print(f"\nCar wash pass starts on {self.start_date.strftime('%b %d %Y')}")
         print(f"Car wash pass ends on {(self.end_date).strftime('%b %d %Y')}")
-        print(f"Total no of days: {(self.end_date - self.start_date).days}")
+        print(f"Total no of days: {(self.end_date - self.start_date).days}\n")
     
     def print_member_days(self):
         days = (self.end_date - self.start_date).days
